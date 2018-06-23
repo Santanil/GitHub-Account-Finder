@@ -11,26 +11,26 @@ function getProfile(e){
 			xhttp.onreadystatechange = function(){
 				if(xhttp.readyState == 4 && xhttp.status == 200){
 					var user = JSON.parse(xhttp.responseText);
-					document.getElementById('profile').innerHTML = `<div class="panel 		panel-default">
+					document.getElementById('profile').innerHTML = `<div class="panel panel-default">
   								<div class="panel-heading">
-    							<h3 class="panel-title">${user.name}</h3>
+    									<h3 class="panel-title">${user.name}</h3>   // Displaying username   
   								</div>
   								<div class="panel-body">
-    								<div class="row">
-    								<div class="col-md-3">
-    								<img src="${user.avatar_url}">
-    								</div>
-    								<div class="col-md-9">
-    									<span class="label label-primary">Public Repos ${user.public_repos}</span>
-    									<span class="label label-danger">Public Gists ${user.public_gists}</span>
-    									<br><br>
-    									<ul class="list-group">
-    										<li class="list-group-item">Website: ${user.blog}</li>
-    										<li class="list-group-item">Email: ${user.email}</li>
-    									</ul>
-    									<a class="btn btn-default" target="_blank" href="${user.html_url}">Visit Github</a>
-    								</div>
-    								</div>
+    									<div class="row">
+										<div class="col-md-3">
+											<img src="${user.avatar_url}">     // Displaying profile image
+										</div>
+										<div class="col-md-9">
+											<span class="label label-primary">Public Repos ${user.public_repos}</span>	// Displaying no.of public repos
+											<span class="label label-danger">Public Gists ${user.public_gists}</span>	// Displaying no.of gists
+											<br><br>
+											<ul class="list-group">
+												<li class="list-group-item">Website: ${user.blog}</li>		// Displaying no.of gists	
+												<li class="list-group-item">Email: ${user.email}</li>		// Displaying email address of the user
+											</ul>
+											<a class="btn btn-default" target="_blank" href="${user.html_url}">Visit Github</a>	// hyperlink to the user GitHub Account
+										</div>
+    									</div>
   								</div>
 							</div>`;
 				}
