@@ -4,7 +4,7 @@ function getProfile(e){
 
 			var username = document.getElementById('username').value;
 			if(!username || username == ''){
-				username = 'bradtraversy';
+				username = 'Santanil';
 			}
 
 			var xhttp = new XMLHttpRequest();
